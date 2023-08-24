@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  
+  <div id="result1"></div>
+  <div id="result2"></div>
+  <div id="result3"></div>
+
+  <script>
+    function frankenSplice(arr1, arr2, n) {
+      let result = arr2.slice();
+      result.splice(n, 0, ...arr1);
+      return result;
+    }
+
+    const result1 = frankenSplice([1, 2, 3], [4, 5], 1);
+    document.getElementById("result1").innerHTML = "Результат 1: " + result1;
+
+    const result2 = frankenSplice([1, 2], ["a", "b"], 1);
+    document.getElementById("result2").innerHTML = "Результат 2: " + result2;
+
+    const result3 = frankenSplice([1, 2, 3, 4], [], 0);
+    document.getElementById("result3").innerHTML = "Результат 3: " + result3;
+  </script>
+</body>
+</html>
