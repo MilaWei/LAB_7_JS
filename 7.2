@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Моя сторінка</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Моя сторінка</h1>
+  <div id="result1"></div>
+  <div id="result2"></div>
+  <div id="result3"></div> <!-- Додано div з ідентифікатором result3 -->
+  <div id="result4"></div> <!-- Додано div з ідентифікатором result4 -->
+  <script>
+    function bouncer(arr) {
+      return arr.filter(Boolean);
+    }
+
+    const result1 = bouncer([7, "ate", "", false, 9]);
+    document.getElementById("result1").innerHTML = "Результат 1: " + result1;
+
+    const result2 = bouncer(["a", "b", "c"]);
+    document.getElementById("result2").innerHTML = "Результат 2: " + result2;
+
+    const result3 = bouncer([false, null, 0, NaN, undefined, ""]); // Додано оголошення змінної result3
+    document.getElementById("result3").innerHTML = "Результат 3: " + result3;
+
+    const result4 = bouncer([null, NaN, 1, 2, undefined]); // Додано оголошення змінної result4
+    document.getElementById("result4").innerHTML = "Результат 4: " + result4;
+    
+  </script>
+</body>
+</html>
