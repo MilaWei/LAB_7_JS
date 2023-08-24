@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  
+  <div id="result1"></div>
+  <div id="result2"></div>
+  <div id="result3"></div>
+  <div id="result4"></div>
+
+  <script>
+    function getIndexToIns(arr, num) {
+      arr.push(num);
+      arr.sort((a, b) => a - b);
+      return arr.indexOf(num);
+    }
+
+    const result1 = getIndexToIns([10, 20, 30, 40, 50], 35);
+    const result2 = getIndexToIns([10, 20, 30, 40, 50], 30);
+    const result3 = getIndexToIns([3, 10, 5], 3);
+    const result4 = getIndexToIns([5, 3, 20, 3], 5);
+
+    document.getElementById("result1").innerHTML = "Результат 1: " + result1;
+    document.getElementById("result2").innerHTML = "Результат 2: " + result2;
+    document.getElementById("result3").innerHTML = "Результат 3: " + result3;
+    document.getElementById("result4").innerHTML = "Результат 4: " + result4;
+  </script>
+</body>
+</html>
